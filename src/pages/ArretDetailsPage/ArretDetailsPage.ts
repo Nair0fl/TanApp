@@ -17,7 +17,6 @@ constructor(public navCtrl: NavController, private navParams: NavParams, private
   this.arret = navParams.get('arrets');
   this.httpClient.get('http://open.tan.fr/ewp/tempsattente.json/'+this.arret.codeLieu).subscribe(data => {
         this.horraires=data
-        console.log(this.horraires)
       });
 }
 
