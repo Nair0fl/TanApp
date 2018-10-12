@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Projet app Tan</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Temps d'attente à l'arret</h3>
+
+    <ion-searchbar
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+
+    <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let arret of arrets" (click)="openDetails(arret)">
+        {{ arret.libelle }}
+      </button>
+    </ion-list>
+    </ion-content>
+    <ion-list>
+      Liste arret
+    </ion-list>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>

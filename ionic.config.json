@@ -1,0 +1,13 @@
+{
+  "name": "TanApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/arrets",
+      "proxyUrl": "http://open.tan.fr/ewp/arrets.json"
+    }
+  ],
+  "type": "ionic-angular"
+}

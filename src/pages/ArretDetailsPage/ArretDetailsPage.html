@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Projet app Tan</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Prochain transport</h3>
+
+
+    <ion-content>
+
+      <ion-list>
+        <button ion-item *ngFor="let horraire of horraires" (click)="openDetails(arret)">
+          {{ horraire.terminus }} + {{horraire.temps}}
+        </button>
+      </ion-list>
+      </ion-content>
+      <ion-list>
+        Liste arret
+      </ion-list>
+    </ion-content>
